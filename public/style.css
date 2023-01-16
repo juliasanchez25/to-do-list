@@ -33,7 +33,7 @@
     margin-left: 18px;
 }
 
-.div-insert-task {
+.form-insert-task {
     display: flex;
     margin-left: 15px;
 }
@@ -65,7 +65,7 @@
 .btn-insert-task:hover {
     background-color: #00d977;
     color: #fff;
-    transition: 1s;
+    transition: 0.5s;
     transform: scale(1.1);
     margin-left: 530px;
 }
