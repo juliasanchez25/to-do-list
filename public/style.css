@@ -9,7 +9,7 @@
 .container {
     width: 100vw;
     height: 100vh;
-    background: #2b7ed0;
+    background: #e4e4e4;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -23,7 +23,8 @@
     padding: 20px;
     background: #fff;
     border-radius: 20px;
-    box-shadow: 5px 5px 15px #414141;
+    box-shadow: 2px 2px 15px #dbdbdb;
+    border-top: 20px solid #00d977;
 }
 
 .box h1 {
@@ -57,12 +58,12 @@
     outline: none;
     border: none;
     background-color: #fff;
-    color: #22609e;
+    color: #00d977;
     cursor: pointer;
 }
 
 .btn-insert-task:hover {
-    background-color: #22609e;
+    background-color: #00d977;
     color: #fff;
     transition: 1s;
     transform: scale(1.1);
