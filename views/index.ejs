@@ -33,6 +33,7 @@
         <div class="task-list-container">
           <% tasksList.forEach((task) => { %>
           <div class="task-list">
+            <input id="task-value" value="<%= JSON.stringify(task) %>">
             <%= task.task %> | <%= task.date.toLocaleDateString('pt-BR') %>
             <button class="btn-edit-modal" onclick="toggleModal('edit')">
               <i class="fa-solid fa-pen-to-square i-pen"></i>
@@ -48,17 +49,24 @@
 
         <div id="edit-modal" class="modal modal-hide">
           <div class="modal-header">
-            <h2>Editar</h2>
+            <h2>Alterar tarefa</h2>
             <button class="btn-close-modal" onclick="toggleModal('edit')">
               <i class="fa-solid fa-xmark"></i>
             </button>
           </div>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi
-              illo iure rerum delectus, eos iste sed laudantium non minima
-              reprehenderit id quis ut, eius atque doloremque repudiandae vel
-              itaque. Corporis?
-            </p>
+          <form class="form-insert-task" action="/" method="post">
+            <input
+              class="input-insert-task input-update-task"
+              type="text"
+              name="task"
+              id="task"
+              value="alo"
+            />
+          </form>
+          <button class="btn-update-task" type="submit">
+            Editar
+            <i class="fa-solid fa-pen"></i>
+          </button>
         </div>
 
         <div id="delete-modal" class="modal modal-hide">
@@ -68,7 +76,7 @@
               <i class="fa-solid fa-xmark"></i>
             </button>
           </div>
-            <p>Excluir tarefa?</p>
+          <p>Excluir tarefa?</p>
         </div>
       </div>
     </div>

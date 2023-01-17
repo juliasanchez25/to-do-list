@@ -3,7 +3,7 @@ const Task = require("../models/Task");
 const getAllTasks = async (req, res) => {
   try {
     const tasksList = await Task.find();
-    return res.render("index", { tasksList });
+    return res.render("index", { tasksList, task: null });
   } catch (err) {
     res.status(500).send({ error: err.message });
   }

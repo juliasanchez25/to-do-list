@@ -96,18 +96,12 @@
 
 .task-list {
     display: flex;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
     padding: 25px;
-    width: 800px;
+    width: auto;
     font-size: 18px;
-    border-radius: 20px;
-    box-shadow: 2px 2px 8px #c2c2c2;
-}
-
-.task-list:hover {
-    transition: all 0.3s ease-in-out;
-    transform: scale(1.1);
-    margin-left: 50px;
+    box-shadow: 2px 2px 8px #dadada;
+    border-radius: 15px;
 }
 
 .btn-edit-modal, .btn-delete-modal {
@@ -190,4 +184,24 @@
 
 .modal-hide {
     top: 0;
+}
+
+.btn-update-task {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: .7;
+    background-color: #fff;
+    font-size: 18px;
+    margin-top: 18px;
+    margin-left: 420px;
+}
+
+.btn-update-task:hover{
+    opacity: 1;
+}
+
+.input-update-task {
+    margin-right: 10px;
 }
