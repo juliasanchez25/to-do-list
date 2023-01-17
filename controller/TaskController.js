@@ -9,6 +9,15 @@ const getAllTasks = async (req, res) => {
   }
 };
 
+const getTasks = async (req, res) => {
+  try {
+    const tasksList = await Task.find();
+    return res.json(tasksList);
+  } catch (err) {
+    res.status(500).send({ error: err.message });
+  }
+};
+
 const createTask = async (req, res) => {
   const task = req.body;
 
@@ -26,5 +35,6 @@ const createTask = async (req, res) => {
 
 module.exports = {
   getAllTasks,
+  getTasks,
   createTask,
 };

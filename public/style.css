@@ -19,7 +19,7 @@
 .container {
     width: 100vw;
     height: 100vh;
-    background: #e4e4e4;
+    background: #fcfcfc;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -33,7 +33,7 @@
     padding: 20px;
     background: #fff;
     border-radius: 15px;
-    box-shadow: 2px 2px 15px #dbdbdb;
+    box-shadow: 2px 2px 15px #9b9b9b;
     border-top: 20px solid #00d977;
     overflow-y: scroll;
 }
