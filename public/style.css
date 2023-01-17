@@ -6,6 +6,16 @@
     font-family: Poppins, sans-serif;
 }
 
+*::-webkit-scrollbar{
+	width: 5px;
+	background-color: #d6d8d5;
+}
+
+*::-webkit-scrollbar-thumb{
+	background-color: #00d977;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)s
+}
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -17,14 +27,15 @@
 }
 
 .box {
-    width: 1600px;
+    width: 1280px;
     height: 800px;
     margin: 10px;
     padding: 20px;
     background: #fff;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 2px 2px 15px #dbdbdb;
     border-top: 20px solid #00d977;
+    overflow-y: scroll;
 }
 
 .box h1 {
@@ -41,6 +52,7 @@
 .input-insert-task {
     width: 500px;
     height: auto;
+    margin-top: 20px;
     padding: 10px;
     border: none;
     border-bottom: 1px solid #c9c9c9;
@@ -48,28 +60,52 @@
     font-size: 18px;
 }
 
+.input-insert-task:focus {
+    border-bottom: 3px solid #00d977;
+}
+
 .btn-insert-task {
     width: 40px;
     height: 40px;
-    position: absolute;
     margin-left: 530px;
-    margin-top: 10px;
+    margin-top: 20px;
     border-radius: 40px;
     outline: none;
     border: none;
     background-color: #fff;
     color: #00d977;
     cursor: pointer;
+    transform: translateX(-500px);
 }
 
 .btn-insert-task:hover {
     background-color: #00d977;
     color: #fff;
-    transition: 0.5s;
-    transform: scale(1.1);
+    transition: 0.4s;
     margin-left: 530px;
 }
 
 .i-list {
     margin-right: 8px;
+}
+
+ul {
+    list-style: none;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+li {
+    margin-bottom: 18px;
+    padding: 25px;
+    width: 800px;
+    font-size: 18px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 8px #c2c2c2;
+}
+
+li:hover {
+    transition: all 0.3s ease-out;
+    transform: scale(1.1);
+    margin-left: 50px;
 }

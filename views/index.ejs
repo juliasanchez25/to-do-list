@@ -14,26 +14,29 @@
   <body>
     <div class="container">
       <div class="box">
-        <h1><i class="fa-solid fa-list i-list"></i> To Do List</h1>
-        <form class="form-insert-task" action="/create" method="post">
-          <input
-            class="input-insert-task"
-            type="text"
-            name="task"
-            id="task"
-            placeholder="Add task"
-          />
-          <button class="btn-insert-task" type="submit">
-            <i class="fa-solid fa-plus fa-2x"></i>
-          </button>
-        </form>
+        <div class="form-header">
+          <h1><i class="fa-solid fa-list i-list"></i> To Do List</h1>
+          <form class="form-insert-task" action="/create" method="post">
+            <input
+              class="input-insert-task"
+              type="text"
+              name="task"
+              id="task"
+              placeholder="Add task"
+            />
+            <button class="btn-insert-task" type="submit">
+              <i class="fa-solid fa-plus fa-2x"></i>
+            </button>
+          </form>
+        </div>
 
         <ul>
           <% tasksList.forEach((task) => { %>
-          <li><%= task.task %> | <%= task.date.toLocaleDateString('pt-BR') %></li>
+          <li>
+            <%= task.task %> | <%= task.date.toLocaleDateString('pt-BR') %>
+          </li>
           <% }) %>
         </ul>
-
       </div>
     </div>
     <script src="script.js"></script>
