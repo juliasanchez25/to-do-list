@@ -33,6 +33,25 @@ const createTask = async (req, res) => {
   }
 };
 
+const updateTask = async (req, res) => {
+  try {
+    const task = req.body
+    await Task.updateOne({ _id: req.params.id }, task)
+    res.redirect('/')
+  } catch (error) {
+    res.status(500).send({ error: error.message })
+  }
+};
+
+const deleteTask = async (req, res) => {
+  try {
+    await Task.deleteOne({ _id: req.params.id })
+    res.redirect('/')
+  } catch (error) {
+    res.status(500).send({ error: error.message })
+  }
+};
+
 const getById = async (req, res) => {
   const task = await Task.findOne({ _id: req.params.id });
   const tasksList = await Task.find();
@@ -44,4 +63,6 @@ module.exports = {
   getTasks,
   createTask,
   getById,
+  updateTask,
+  deleteTask
 };
