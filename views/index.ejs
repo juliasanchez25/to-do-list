@@ -22,7 +22,7 @@
               type="text"
               name="task"
               id="task"
-              placeholder="Add task"
+              placeholder="Adicionar tarefa"
             />
             <button class="btn-insert-task" type="submit">
               <i class="fa-solid fa-plus fa-2x"></i>
@@ -30,13 +30,46 @@
           </form>
         </div>
 
-        <ul>
+        <div class="task-list-container">
           <% tasksList.forEach((task) => { %>
-          <li>
+          <div class="task-list">
             <%= task.task %> | <%= task.date.toLocaleDateString('pt-BR') %>
-          </li>
+            <button class="btn-edit-modal" onclick="toggleModal('edit')">
+              <i class="fa-solid fa-pen-to-square i-pen"></i>
+            </button>
+            <button class="btn-delete-modal" onclick="toggleModal('delete')">
+              <i class="fa-solid fa-trash i-trash"></i>
+            </button>
+          </div>
           <% }) %>
-        </ul>
+        </div>
+
+        <div class="fade fade-hide"></div>
+
+        <div id="edit-modal" class="modal modal-hide">
+          <div class="modal-header">
+            <h2>Editar</h2>
+            <button class="btn-close-modal" onclick="toggleModal('edit')">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi
+              illo iure rerum delectus, eos iste sed laudantium non minima
+              reprehenderit id quis ut, eius atque doloremque repudiandae vel
+              itaque. Corporis?
+            </p>
+        </div>
+
+        <div id="delete-modal" class="modal modal-hide">
+          <div class="modal-header">
+            <h2>Excluir</h2>
+            <button class="btn-close-modal" onclick="toggleModal('delete')">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+            <p>Excluir tarefa?</p>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>

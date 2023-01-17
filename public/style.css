@@ -17,13 +17,13 @@
 }
 
 .container {
-    width: 100vw;
-    height: 100vh;
-    background: #fcfcfc;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #fcfcfc;
 }
 
 .box {
@@ -32,10 +32,10 @@
     margin: 10px;
     padding: 20px;
     background: #fff;
-    border-radius: 15px;
     box-shadow: 2px 2px 15px #9b9b9b;
     border-top: 20px solid #00d977;
     overflow-y: scroll;
+    border-radius: 20px;
 }
 
 .box h1 {
@@ -89,13 +89,13 @@
     margin-right: 8px;
 }
 
-ul {
-    list-style: none;
+.task-list-container {
     padding: 15px;
     margin-top: 50px;
 }
 
-li {
+.task-list {
+    display: flex;
     margin-bottom: 18px;
     padding: 25px;
     width: 800px;
@@ -104,8 +104,90 @@ li {
     box-shadow: 2px 2px 8px #c2c2c2;
 }
 
-li:hover {
-    transition: all 0.3s ease-out;
+.task-list:hover {
+    transition: all 0.3s ease-in-out;
     transform: scale(1.1);
     margin-left: 50px;
+}
+
+.btn-edit-modal, .btn-delete-modal {
+    border: none;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    transform: scale(1.5);
+    padding: 5px;
+    margin-left: 15px;
+    opacity: .7;
+    transition: 0.4s;
+}
+
+.btn-edit-modal:hover, .btn-delete-modal:hover {
+    opacity: 1;
+}
+
+.btn-delete-modal {
+    margin-left: 10px;
+}
+
+.btn-close-modal {
+    padding: .6rem 1.2rem;
+    border: none;
+    cursor: pointer;
+    opacity: .7;
+    font-size: 1rem;
+    transition: 0.4s;
+    background-color: #00d977;
+    color: #fff;
+}
+
+.btn-close-modal:hover {
+    opacity: 1;
+}
+
+.fade, .modal {
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 5;
+}
+
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 10;
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.fade-hide, .modal-hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-hide {
+    top: 0;
 }
