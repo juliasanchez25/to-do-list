@@ -35,7 +35,7 @@
           <div class="task-list">
             <div><%= task.task %></div>
             <span class="task-date"><%= task.date.toLocaleDateString('pt-BR') %></span>
-            <div class="btn-edit-delete">
+            <div class="edit-delete-area">
               <button
                 class="btn-edit-modal"
                 onclick="toggleModal('edit', '<%= JSON.stringify(task) %>')"
