@@ -97,12 +97,17 @@
 
 .task-list {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 15px;
     padding: 25px;
-    width: 800px;
-    height: 50px;
+    width: 90%;
     font-size: 18px;
     border-radius: 15px;
+}
+
+.task-date {
+    position: absolute;
+    margin-left: 48%;
 }
 
 .btn-edit-modal, .btn-delete-modal {
@@ -112,7 +117,6 @@
     cursor: pointer;
     transform: scale(1.5);
     padding: 5px;
-    margin-left: 15px;
     opacity: .7;
     transition: 0.4s;
 }

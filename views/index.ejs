@@ -33,19 +33,22 @@
         <div class="task-list-container">
           <% tasksList.forEach((task) => { %>
           <div class="task-list">
-            <%= task.task %> | <%= task.date.toLocaleDateString('pt-BR') %>
-            <button
-              class="btn-edit-modal"
-              onclick="toggleModal('edit', '<%= JSON.stringify(task) %>')"
-            >
-              <i class="fa-solid fa-pen-to-square i-pen"></i>
-            </button>
-            <button
-              class="btn-delete-modal"
-              onclick="toggleModal('delete', '<%= JSON.stringify(task) %>')"
-            >
-              <i class="fa-solid fa-trash i-trash"></i>
-            </button>
+            <div><%= task.task %></div>
+            <span class="task-date"><%= task.date.toLocaleDateString('pt-BR') %></span>
+            <div class="btn-edit-delete">
+              <button
+                class="btn-edit-modal"
+                onclick="toggleModal('edit', '<%= JSON.stringify(task) %>')"
+              >
+                <i class="fa-solid fa-pen-to-square i-pen"></i>
+              </button>
+              <button
+                class="btn-delete-modal"
+                onclick="toggleModal('delete', '<%= JSON.stringify(task) %>')"
+              >
+                <i class="fa-solid fa-trash i-trash"></i>
+              </button>
+            </div>
           </div>
           <% }) %>
         </div>
