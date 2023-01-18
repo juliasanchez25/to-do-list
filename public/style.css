@@ -207,5 +207,27 @@
 }
 
 .btn-confirm-delete, .btn-cancel-delete {
-    
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    opacity: .7;
+    transition: 0.5s;
+    font-size: 15px;
+    margin-top: 25px;
+    padding: .6rem 1.2rem;
+}
+
+.btn-confirm-delete {
+    background-color: #00d977;
+    color: #fff;
+}
+
+.btn-cancel-delete {
+    background-color: #c9c9c9;
+    color: #000;
+}
+
+.btn-confirm-delete:hover, .btn-cancel-delete:hover {
+    opacity: 1;
 }

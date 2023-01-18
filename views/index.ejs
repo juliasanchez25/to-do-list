@@ -40,7 +40,10 @@
             >
               <i class="fa-solid fa-pen-to-square i-pen"></i>
             </button>
-            <button class="btn-delete-modal" onclick="toggleModal('delete', '<%= JSON.stringify(task) %>')">
+            <button
+              class="btn-delete-modal"
+              onclick="toggleModal('delete', '<%= JSON.stringify(task) %>')"
+            >
               <i class="fa-solid fa-trash i-trash"></i>
             </button>
           </div>
@@ -52,7 +55,11 @@
         <div id="edit-modal" class="modal modal-hide">
           <div class="modal-header">
             <h2>Alterar tarefa</h2>
-            <button class="btn-close-modal" onclick="toggleModal('edit')">
+            <button
+              class="btn-close-modal"
+              onclick="toggleModal('edit')"
+              type="button"
+            >
               <i class="fa-solid fa-xmark"></i>
             </button>
           </div>
@@ -80,7 +87,11 @@
           <div id="delete-modal" class="modal modal-hide">
             <div class="modal-header">
               <h2>Excluir</h2>
-              <button class="btn-close-modal" onclick="toggleModal('delete')">
+              <button
+                class="btn-close-modal"
+                onclick="toggleModal('delete')"
+                type="button"
+              >
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
