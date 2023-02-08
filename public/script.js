@@ -6,7 +6,7 @@ const toggleModal = (value, taskString) => {
   fade.classList.toggle("fade-hide");
 
   if (!taskString) return;
-  console.log(taskString)
+  console.log(taskString);
   const task = JSON.parse(taskString);
   console.log("task", task);
   document.querySelector("#task-edit-value").value = task.task;
